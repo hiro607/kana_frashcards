@@ -32,7 +32,7 @@ remaining_quiz = st.session_state.remaining_quiz
 score = st.session_state.score
 
 # Streamlitのアプリ
-st.title('Katakana Flash cards Quiz 1')
+st.title('Hiragana Flash cards Quiz 1')
 
 # クイズが終了したかどうかを確認
 if remaining_quiz == 0:
@@ -56,7 +56,7 @@ else:
     romanji = st.session_state.romanji
 
     st.write(f"""
-        <div style="text-align: center; font-size: 300px; font-family: 'Noto Sans JP';">
+        <div style="text-align: center; font-size: 250px; font-family: 'Noto Sans JP';">
             {hiragana}
         </div>
     """, unsafe_allow_html=True)
