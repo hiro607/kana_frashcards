@@ -26,7 +26,7 @@ remaining_quiz = st.session_state.remaining_quiz
 score = st.session_state.score
 
 # Streamlitのアプリ
-st.title('Hiragana Flash cards Quiz')
+st.title('Hiragana Flash cards Quiz 2')
 
 # クイズが終了したかどうかを確認
 if remaining_quiz == 0:
