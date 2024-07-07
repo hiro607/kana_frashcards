@@ -25,14 +25,14 @@ if 'remaining_quiz' not in st.session_state:
     st.session_state.remaining_quiz = 10
     st.session_state.score = 0
     st.session_state.hiragana, st.session_state.romanji = get_random_hiragana()
-    st.session_state.incorrect_answers = []
     st.session_state.show_answer = False
+    st.session_state.incorrect_answers = []
 
 remaining_quiz = st.session_state.remaining_quiz
 score = st.session_state.score
 
 # Streamlitのアプリ
-st.title('Hiragana Flash cards Quiz 1')
+st.title('Katakana Flash cards Quiz 1')
 
 # クイズが終了したかどうかを確認
 if remaining_quiz == 0:
