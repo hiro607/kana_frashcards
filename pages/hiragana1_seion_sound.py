@@ -25,6 +25,7 @@ if 'remaining_quiz' not in st.session_state:
     st.session_state.remaining_quiz = 10
     st.session_state.score = 0
     st.session_state.hiragana, st.session_state.romanji = get_random_hiragana()
+    st.session_state.incorrect_answers = []
     st.session_state.show_answer = False
 
 remaining_quiz = st.session_state.remaining_quiz
