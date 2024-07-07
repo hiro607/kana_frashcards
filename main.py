@@ -8,5 +8,3 @@ st.markdown("""
 2. **Commencez la session et pratiquez (un quiz comprend 10 questions par session).**
 3. **À la fin de la session, vos résultats seront affichés. Notez les hiraganas dont vous n'avez pas trouvé la bonne réponse.**
 """)
-
-st.image('kana_renshuu.png')
