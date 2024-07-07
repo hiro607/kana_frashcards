@@ -36,11 +36,16 @@ st.title('Hiragana Flash cards Quiz 1')
 # クイズが終了したかどうかを確認
 if remaining_quiz == 0:
     st.markdown(f'### Votre score est {score} points sur 10')
+    st.markdown('### Les kanas incorrects et leur prononciation :')
+    for hiragana, romanji in st.session_state.incorrect_answers:
+        st.markdown(f'- {hiragana}: {romanji}')
+
     if st.button('Commencez un nouveau quiz'):
         st.session_state.remaining_quiz = 10
         st.session_state.score = 0
         st.session_state.hiragana, st.session_state.romanji = get_random_hiragana()
         st.session_state.show_answer = False
+        st.session_state.incorrect_answers = []
         st.experimental_rerun()  # アプリを再実行して新しいクイズを開始
 
 else:
@@ -69,8 +74,8 @@ else:
         st.experimental_rerun()
 
     if st.button('Incorrect'):
+        st.session_state.incorrect_answers.append((hiragana, romanji))  # 間違った答えを記録
         st.session_state.remaining_quiz -= 1
-        st.session_state.score += 0
         st.session_state.hiragana, st.session_state.romanji = get_random_hiragana()
         st.session_state.show_answer = False
         st.experimental_rerun()
